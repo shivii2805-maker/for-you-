@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Prafull ❤️</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff8fa;
+            color: #542532;
+            overflow-x: hidden;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        #floatingHearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            animation: floatHeart linear forwards;
+            opacity: 0.7;
+        }
+
+        @keyframes floatHeart {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        #confettiContainer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .confetti {
+            position: absolute;
+            top: -20px;
+            border-radius: 2px;
+            background: #d87d94;
+            animation: confettiFall 5s linear forwards;
+        }
+
+        .confetti:nth-child(3n) {
+            background: #f3b5c4;
+        }
+
+        .confetti:nth-child(4n) {
+            background: #d6a6b4;
+        }
+
+        .confetti:nth-child(5n) {
+            background: #e9c6ce;
+        }
+
+        @keyframes confettiFall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =====================================================
+           LOCK SCREEN
+        ===================================================== */
+
+        #lockScreen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #ffe1e9,
+                    #fff8fa 55%,
+                    #f8e9ed
+                );
+
+            position: relative;
+            z-index: 10;
+        }
+
+        .lock-card {
+            width: 100%;
+            max-width: 500px;
+            padding: 55px 35px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(15px);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 25px 70px rgba(90,40,55,0.15);
+
+            border: 1px solid rgba(180,100,120,0.15);
+        }
+
+        .lock-heart {
+            font-size: 60px;
+            margin-bottom: 15px;
+
+            animation: heartBeat 1.5s infinite;
+        }
+
+        .lock-card h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: 55px;
+            color: #9d5367;
+            margin-bottom: 15px;
+        }
+
+        .lock-card p {
+            color: #765963;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        #passwordInput,
+        #nameInput {
+            width: 100%;
+            padding: 15px 18px;
+
+            border: 1px solid #e0b4bf;
+            border-radius: 30px;
+
+            outline: none;
+
+            text-align: center;
+            font-size: 15px;
+
+            background: #fffafb;
+        }
+
+        #passwordInput:focus,
+        #nameInput:focus {
+            border-color: #b96378;
+            box-shadow: 0 0 0 4px rgba(185,99,120,0.08);
+        }
+
+        .primary-btn {
+            margin-top: 15px;
+
+            border: none;
+            border-radius: 30px;
+
+            padding: 14px 30px;
+
+            background: #a9576b;
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+
+            font-size: 14px;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            background: #874253;
+            box-shadow: 0 10px 25px rgba(100,40,55,0.2);
+        }
+
+        #hintText {
+            margin-top: 20px;
+            min-height: 25px;
+            color: #a9576b;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           MAIN WEBSITE
+        ===================================================== */
+
+        #mainWebsite {
+            position: relative;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #ffe0e8,
+                    #fff8fa 50%,
+                    #f8e9ed
+                );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-heading {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #a9576b;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(60px, 10vw, 110px);
+            color: #8e475c;
+            margin: 15px 0;
+        }
+
+        .hero h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            font-weight: 500;
+            color: #67404c;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            color: #765963;
+            line-height: 1.8;
+        }
+
+        .scroll-btn {
+            margin-top: 35px;
+
+            padding: 13px 25px;
+
+            border: 1px solid #c98496;
+            border-radius: 30px;
+
+            background: transparent;
+            color: #a9576b;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .scroll-btn:hover {
+            background: #a9576b;
+            color: white;
+        }
+
+
+        /* =====================================================
+           SECTION HEADINGS
+        ===================================================== */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading span {
+            color: #b66a7a;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        .section-heading h2 {
+            font-family: "Great Vibes", cursive;
+            font-size: 55px;
+            color: #914c60;
+            margin: 10px 0;
+        }
+
+        .section-heading p {
+            color: #765963;
+        }
+
+
+        /* =====================================================
+           OUR LITTLE STORY
+        ===================================================== */
+
+        .story-section {
+            padding: 100px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(255,190,210,0.25),
+                    transparent 40%
+                ),
+                #fff8fa;
+        }
+
+        .story-container {
+            max-width: 850px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .story-card {
+            position: relative;
+
+            display: flex;
+            gap: 25px;
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.85);
+
+            border:
+                1px solid rgba(180,100,120,0.15);
+
+            box-shadow:
+                0 15px 40px rgba(80,30,50,0.08);
+
+            transition: 0.4s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 50px rgba(80,30,50,0.14);
+        }
+
+        .story-icon {
+            min-width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fff0f4;
+
+            font-size: 28px;
+        }
+
+        .story-content {
+            flex: 1;
+        }
+
+        .story-number {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #b66a7a;
+        }
+
+        .story-content h3 {
+            margin: 7px 0 12px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 32px;
+
+            color: #542532;
+        }
+
+        .story-content p {
+            line-height: 1.8;
+            color: #6f5960;
+            font-size: 15px;
+        }
+
+        .story-content button {
+            margin-top: 15px;
+
+            padding: 10px 20px;
+
+            border: 1px solid #d99aaa;
+
+            background: transparent;
+
+            color: #a9576b;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .story-content button:hover {
+            background: #a9576b;
+            color: white;
+        }
+
+        .story-message {
+            margin-top: 18px;
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            background: #fff1f5;
+
+            color: #70404d;
+
+            line-height: 1.7;
+
+            animation: storyReveal 0.5s ease;
+        }
+
+        .story-final {
+            text-align: center;
+
+            padding: 55px 30px;
+
+            margin-top: 20px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f4,
+                    #fff9fb
+                );
+
+            border:
+                1px solid rgba(180,100,120,0.15);
+        }
+
+        .final-heart {
+            font-size: 45px;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        .story-final h3 {
+            margin: 15px 0;
+
+            font-family: "Great Vibes", cursive;
+
+            font-size: 42px;
+
+            color: #9b5365;
+        }
+
+        .story-final p {
+            max-width: 600px;
+
+            margin: auto;
+
+            line-height: 1.9;
+
+            color: #6f5960;
+        }
+
+        .story-final span {
+            display: block;
+
+            margin-top: 25px;
+
+            font-style: italic;
+
+            color: #a9576b;
+        }
+
+        @keyframes storyReveal {
+
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+
+        }
+
+
+        /* =====================================================
+           NAME LOCK
+        ===================================================== */
+
+        .name-section {
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background: #fff;
+        }
+
+        .name-card {
+            max-width: 550px;
+
+            margin: auto;
+
+            padding: 50px 30px;
+
+            border-radius: 30px;
+
+            background: #fff8fa;
+
+            box-shadow:
+                0 20px 50px rgba(80,30,50,0.08);
+        }
+
+        .name-card .lock-icon {
+            font-size: 50px;
+        }
+
+        .name-card h2 {
+            font-family: "Great Vibes", cursive;
+
+            font-size: 48px;
+
+            color: #965064;
+
+            margin: 15px 0;
+        }
+
+        .name-card p {
+            color: #765963;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        #nameError {
+            margin-top: 15px;
+            color: #a9576b;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           LETTER
+        ===================================================== */
+
+        .letter-section {
+            padding: 100px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff5f7,
+                    #fff
+                );
+        }
+
+        .letter-paper {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 60px 55px;
+
+            background: #fffdfd;
+
+            border-radius: 5px;
+
+            box-shadow:
+                0 20px 60px rgba(80,30,50,0.12);
+
+            position: relative;
+        }
+
+        .letter-paper::before {
+            content: "♡";
+
+            position: absolute;
+
+            top: 20px;
+            right: 30px;
+
+            font-size: 40px;
+
+            color: #e1a5b2;
+        }
+
+        .letter-paper h2 {
+            text-align: center;
+
+            font-family: "Great Vibes", cursive;
+
+            font-size: 48px;
+
+            color: #914c60;
+
+            margin-bottom: 35px;
+        }
+
+        .letter-paper p {
+            color: #5f4b52;
+
+            line-height: 2;
+
+            margin-bottom: 20px;
+
+            font-size: 15px;
+        }
+
+        .letter-signature {
+            text-align: right;
+
+            margin-top: 35px;
+
+            font-family: "Great Vibes", cursive;
+
+            font-size: 32px;
+
+            color: #a9576b;
+        }
+
+
+        /* =====================================================
+           CAKE SECTION
+        ===================================================== */
+
+        .cake-section {
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background: #fff8fa;
+        }
+
+        .cake-section h2 {
+            font-family: "Great Vibes", cursive;
+
+            font-size: 60px;
+
+            color: #914c60;
+
+            margin-bottom: 15px;
+        }
+
+        .cake-section > p {
+            color: #765963;
+            margin-bottom: 35px;
+        }
+
+        #cakeArea {
+            max-width: 600px;
+
+            margin: 40px auto 0;
+        }
+
+        .cake {
+            position: relative;
+
+            width: 280px;
+            height: 170px;
+
+            margin: 60px auto 30px;
+        }
+
+        .cake-bottom {
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 280px;
+            height: 90px;
+
+            background: #d88c9e;
+
+            border-radius:
+                10px 10px 25px 25px;
+
+            box-shadow:
+                inset 0 -10px rgba(120,50,70,0.08);
+        }
+
+        .cake-middle {
+            position: absolute;
+
+            bottom: 70px;
+            left: 20px;
+
+            width: 240px;
+            height: 60px;
+
+            background: #f2b7c5;
+
+            border-radius: 12px;
+        }
+
+        .cake-top {
+            position: absolute;
+
+            bottom: 115px;
+            left: 40px;
+
+            width: 200px;
+            height: 55px;
+
+            background: #fff0f3;
+
+            border-radius: 50%;
+        }
+
+        .candle {
+            position: absolute;
+
+            bottom: 165px;
+
+            width: 12px;
+            height: 45px;
+
+            background: #f6c4cf;
+
+            border-radius: 5px;
+        }
+
+        .candle1 {
+            left: 85px;
+        }
+
+        .candle2 {
+            left: 135px;
+        }
+
+        .candle3 {
+            left: 185px;
+        }
+
+        .flame {
+            position: absolute;
+
+            width: 18px;
+            height: 25px;
+
+            top: -24px;
+            left: -3px;
+
+            background: #ffc857;
+
+            border-radius:
+                50% 50% 50% 0;
+
+            transform: rotate(45deg);
+
+            animation: flame 0.8s infinite alternate;
+        }
+
+        @keyframes flame {
+
+            from {
+                transform:
+                    rotate(45deg)
+                    scale(1);
+            }
+
+            to {
+                transform:
+                    rotate(45deg)
+                    scale(1.15);
+            }
+
+        }
+
+        #blowButton {
+            margin-top: 10px;
+        }
+
+        #birthdayMessage {
+            margin-top: 30px;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            background: #fff0f4;
+
+            animation: storyReveal 0.6s ease;
+        }
+
+        #birthdayMessage h3 {
+            font-family: "Great Vibes", cursive;
+
+            font-size: 45px;
+
+            color: #9b5365;
+
+            margin-bottom: 10px;
+        }
+
+        #birthdayMessage p {
+            line-height: 1.8;
+            color: #70404d;
+        }
+
+
+        /* =====================================================
+           FINAL MESSAGE
+        ===================================================== */
+
+        .final-section {
+            min-height: 70vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #ffe2ea,
+                    #fff8fa
+                );
+        }
+
+        .final-content {
+            max-width: 750px;
+        }
+
+        .final-content .big-heart {
+            font-size: 65px;
+
+            animation: heartBeat 1.5s infinite;
+        }
+
+        .final-content h2 {
+            font-family: "Great Vibes", cursive;
+
+            font-size: clamp(55px, 8vw, 85px);
+
+            color: #914c60;
+
+            margin: 15px 0;
+        }
+
+        .final-content p {
+            line-height: 2;
+
+            color: #765963;
+
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           MUSIC BUTTON
+        ===================================================== */
+
+        #musicButton {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: #a9576b;
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            z-index: 2000;
+
+            box-shadow:
+                0 10px 25px rgba(80,30,50,0.2);
+        }
+
+
+        /* =====================================================
+           SHAKE
+        ===================================================== */
+
+        .shake {
+            animation: shakeInput 0.4s ease;
+        }
+
+        @keyframes shakeInput {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-8px);
+            }
+
+            40% {
+                transform: translateX(8px);
+            }
+
+            60% {
+                transform: translateX(-6px);
+            }
+
+            80% {
+                transform: translateX(6px);
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .lock-card {
+                padding: 40px 22px;
+            }
+
+            .lock-card h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .section-heading h2 {
+                font-size: 45px;
+            }
+
+            .story-card {
+                padding: 25px 20px;
+                gap: 15px;
+            }
+
+            .story-icon {
+                min-width: 50px;
+                height: 50px;
+                font-size: 22px;
+            }
+
+            .story-content h3 {
+                font-size: 27px;
+            }
+
+            .story-final h3 {
+                font-size: 34px;
+            }
+
+            .letter-paper {
+                padding: 40px 25px;
+            }
+
+            .letter-paper h2 {
+                font-size: 40px;
+            }
+
+            .cake {
+                transform: scale(0.85);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         FLOATING HEARTS
+    ===================================================== -->
+
+    <div id="floatingHearts"></div>
+
+    <div id="confettiContainer"></div>
+
+
+    <!-- =====================================================
+         SECRET CODE SCREEN
+    ===================================================== -->
+
+    <section id="lockScreen">
+
+        <div class="lock-card">
+
+            <div class="lock-heart">
+                ❤️
+            </div>
+
+            <h1>Something Special</h1>
+
+            <p>
+                Before you enter this little world,
+                you need to know the three words
+                hidden inside it. 🥹
+            </p>
+
+            <input
+                type="text"
+                id="passwordInput"
+                placeholder="Enter the secret words..."
+                autocomplete="off"
+            >
+
+            <button
+                class="primary-btn"
+                id="unlockBtn"
+            >
+                Unlock ❤️
+            </button>
+
+            <div id="hintText"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN WEBSITE
+    ===================================================== -->
+
+    <main
+        id="mainWebsite"
+        class="hidden"
+    >
+
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="small-heading">
+                    A little surprise for you
+                </div>
+
+                <h1>
+                    Happy Birthday,
+                    Prafull ❤️
+                </h1>
+
+                <h2>
+                    This little world is just for you.
+                </h2>
+
+                <p>
+                    Because some people deserve more than
+                    just a birthday wish...
+                    they deserve a whole little story. 🥹
+                </p>
+
+                <button
+                    class="scroll-btn"
+                    onclick="scrollToSection('story')"
+                >
+                    Begin our story ↓
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             OUR LITTLE STORY
+        ================================================= -->
+
+        <section
+            class="story-section"
+            id="story"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    ♡ A little piece of us ♡
+                </span>
+
+                <h2>
+                    Our Little Story
+                </h2>
+
+                <p>
+                    Some moments don't need pictures
+                    to be remembered. ❤️
+                </p>
+
+            </div>
+
+
+            <div class="story-container">
+
+
+                <!-- MOMENT 1 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        ✨
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-number">
+                            01
+                        </span>
+
+                        <h3>
+                            How It Started
+                        </h3>
+
+                        <p>
+                            We met randomly at the office...
+                            and neither of us knew that this
+                            random meeting would slowly become
+                            something so special. ❤️
+                        </p>
+
+                        <button
+                            onclick="showStoryMessage(1)"
+                        >
+                            Tap to remember ♡
+                        </button>
+
+                        <div
+                            id="storyMessage1"
+                            class="story-message hidden"
+                        >
+                            Sometimes the most beautiful
+                            chapters begin completely by
+                            accident. 🥹❤️
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOMENT 2 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        🤍
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-number">
+                            02
+                        </span>
+
+                        <h3>
+                            The Little Things
+                        </h3>
+
+                        <p>
+                            The hugs, cuddles, laughter,
+                            silly fights, getting upset
+                            and then finding our way back
+                            to each other...
+                        </p>
+
+                        <button
+                            onclick="showStoryMessage(2)"
+                        >
+                            Tap to remember ♡
+                        </button>
+
+                        <div
+                            id="storyMessage2"
+                            class="story-message hidden"
+                        >
+                            It's funny how the smallest
+                            moments can become the memories
+                            we miss the most. 💕
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOMENT 3 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        🌙
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Gurgaon Days
+                        </h3>
+
+                        <p>
+                            There was a time when seeing you,
+                            talking to you and being around
+                            you was simply a part of everyday
+                            life.
+                        </p>
+
+                        <button
+                            onclick="showStoryMessage(3)"
+                        >
+                            Tap to remember ♡
+                        </button>
+
+                        <div
+                            id="storyMessage3"
+                            class="story-message hidden"
+                        >
+                            If I could go back to one chapter,
+                            I'd probably choose those ordinary
+                            Gurgaon days with you. ❤️
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOMENT 4 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        ✈️
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Then Came Mumbai
+                        </h3>
+
+                        <p>
+                            You left Gurgaon to build something
+                            better for yourself, and suddenly
+                            distance became a part of our story.
+                        </p>
+
+                        <button
+                            onclick="showStoryMessage(4)"
+                        >
+                            Tap to remember ♡
+                        </button>
+
+                        <div
+                            id="storyMessage4"
+                            class="story-message hidden"
+                        >
+                            Distance changed the way we meet,
+                            but it doesn't erase what those days
+                            meant to me. 🥹❤️
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FINAL STORY -->
+
+                <div class="story-final">
+
+                    <div class="final-heart">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        And The Story Continues...
+                    </h3>
+
+                    <p>
+                        Maybe life doesn't always let us stay
+                        in the same place forever.
+
+                        But some people become a part of your
+                        heart — no matter how far away they are.
+                    </p>
+
+                    <span>
+                        "Some memories don't fade.
+                        They become a part of who we are." ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NAME LOCK
+        ================================================= -->
+
+        <section class="name-section">
+
+            <div class="name-card">
+
+                <div class="lock-icon">
+                    🔐
+                </div>
+
+                <h2>
+                    One More Little Secret
+                </h2>
+
+                <p>
+                    This next part is only for one person.
+
+                    <br>
+
+                    If you're really Prafull,
+                    you know what to enter. ❤️
+                </p>
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your name..."
+                    autocomplete="off"
+                >
+
+                <button
+                    class="primary-btn"
+                    id="openLetterBtn"
+                >
+                    Open My Letter 💌
+                </button>
+
+                <div id="nameError"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LETTER
+        ================================================= -->
+
+        <section
+            id="letterSection"
+            class="letter-section hidden"
+        >
+
+            <div class="letter-paper">
+
+                <h2>
+                    A Letter For You ❤️
+                </h2>
+
+
+                <p>
+                    ❤️ Happy Birthday, Prafull ❤️
+                </p>
+
+
+                <p>
+                    Happy Birthday to the person who became
+                    so special to me in a way I never expected.
+                    We met randomly at the office, and I never
+                    imagined that in such a short time, a random
+                    meeting would turn into something so beautiful
+                    and meaningful.
+                </p>
+
+
+                <p>
+                    From spending countless hours together,
+                    our hugs, kisses and cuddles, to laughing
+                    over the smallest things, fighting, getting
+                    upset, and then finding our way back to each
+                    other — every little moment with you has
+                    become a memory I will always carry in my heart.
+                </p>
+
+
+                <p>
+                    And then came the day you had to leave Gurgaon
+                    and move to Mumbai for your career. I still
+                    remember how emotional that moment was. We
+                    both cried because, suddenly, the person who
+                    had become such an important part of everyday
+                    life was going away. But somewhere in those
+                    tears was also pride — because you were choosing
+                    to leave behind your comfort, your family,
+                    friends and the life you knew, to build
+                    something better for yourself.
+                </p>
+
+
+                <p>
+                    I know it wasn't easy for you to leave everything
+                    behind, and I want you to know that I truly
+                    admire the courage it takes to do that. I hope
+                    Mumbai gives you everything you are working so
+                    hard for, and I hope you achieve every dream
+                    you've ever told me about.
+                </p>
+
+
+                <p>
+                    No matter how far the distance becomes, I will
+                    always cherish the time we had together in
+                    Gurgaon — our laughter, our tears, our fights,
+                    our hugs, our little moments and especially
+                    the love we shared.
+                </p>
+
+
+                <p>
+                    On your birthday, I just want you to remember
+                    one thing: you are deeply loved, deeply valued,
+                    and your presence has made a beautiful
+                    difference in my life.
+                </p>
+
+
+                <p>
+                    Happy Birthday, Prafull. ❤️
+                    May this new chapter bring you success,
+                    peace, happiness and everything your heart deserves.
+                </p>
+
+
+                <p>
+                    And wherever life takes us, a part of my heart
+                    will always hold the memories of "us" —
+                    especially those beautiful days when it was
+                    just you and me, together in Gurgaon. 🥹❤️
+                </p>
+
+
+                <p>
+                    Happy Birthday, my love.
+                    I'm so proud of you. ❤️🎂
+                </p>
+
+
+                <div class="letter-signature">
+                    Always with love ❤️
+                    your shivu😘🫠
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CAKE SURPRISE
+        ================================================= -->
+
+        <section class="cake-section">
+
+            <h2>
+                One Last Surprise 🎂
+            </h2>
+
+            <p>
+                Because a birthday isn't complete
+                without a little wish. ❤️
+            </p>
+
+            <button
+                class="primary-btn"
+                id="cakeButton"
+            >
+                Bring the cake 🎂
+            </button>
+
+
+            <div
+                id="cakeArea"
+                class="hidden"
+            >
+
+                <div class="cake">
+
+                    <div class="cake-bottom"></div>
+
+                    <div class="cake-middle"></div>
+
+                    <div class="cake-top"></div>
+
+
+                    <div class="candle candle1">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle2">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle3">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="blowButton"
+                >
+                    Blow the candles 🕯️
+                </button>
+
+
+                <div
+                    id="birthdayMessage"
+                    class="hidden"
+                >
+
+                    <h3>
+                        Make a Wish ❤️
+                    </h3>
+
+                    <p>
+                        Close your eyes for a second...
+
+                        <br><br>
+
+                        Think about everything you want
+                        from this new chapter of your life.
+
+                        <br><br>
+
+                        I hope you get it all.
+
+                        And maybe a little extra happiness
+                        along the way. 🥹❤️
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL MESSAGE
+        ================================================= -->
+
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <div class="big-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    Happy Birthday,
+                    My Love
+                </h2>
+
+                <p>
+                    Wherever you are...
+
+                    <br>
+
+                    Mumbai or anywhere else life takes you...
+
+                    <br><br>
+
+                    I hope you always remember that
+                    there will always be a little part
+                    of my heart holding onto our beautiful
+                    memories.
+
+                    <br><br>
+
+                    Thank you for being you.
+
+                    <br><br>
+
+                    Happy Birthday, Prafull. ❤️🎂
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         MUSIC
+    ===================================================== -->
+
+    <button id="musicButton">
+        ♫
+    </button>
+
+
+    <!-- OPTIONAL MUSIC
+         Put your MP3 here:
+         assets/music/birthday-song.mp3
+    -->
+
+    <audio
+        id="birthdayMusic"
+        loop
+    >
+        <source
+            src="assets/music/birthday-song.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+
+    <script>
+
+        /* =====================================================
+           SECRET CODE
+        ===================================================== */
+
+        const passwordInput =
+            document.getElementById("passwordInput");
+
+        const unlockBtn =
+            document.getElementById("unlockBtn");
+
+        const hintText =
+            document.getElementById("hintText");
+
+        const lockScreen =
+            document.getElementById("lockScreen");
+
+        const mainWebsite =
+            document.getElementById("mainWebsite");
+
+        let wrongAttempts = 0;
+
+        const SECRET_CODE =
+            "i love you";
+
+
+        function unlockWebsite() {
+
+            const enteredCode =
+                passwordInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            if (enteredCode === SECRET_CODE) {
+
+                hintText.textContent =
+                    "Unlocked ❤️";
+
+                createConfetti(80);
+
+
+                lockScreen.style.transition =
+                    "opacity 1.5s ease, transform 1.5s ease";
+
+                lockScreen.style.opacity = "0";
+
+                lockScreen.style.transform =
+                    "scale(1.08)";
+
+
+                setTimeout(() => {
+
+                    lockScreen.style.display =
+                        "none";
+
+                    mainWebsite.classList.remove(
+                        "hidden"
+                    );
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "instant"
+                    });
+
+                    startFloatingHearts();
+
+                }, 1500);
+
+
+                const music =
+                    document.getElementById(
+                        "birthdayMusic"
+                    );
+
+                if (music) {
+
+                    music.volume = 0.25;
+
+                    music.play().catch(() => {});
+
+                }
+
+            }
+
+            else {
+
+                wrongAttempts++;
+
+
+                if (wrongAttempts === 1) {
+
+                    hintText.innerHTML =
+                        "Hint: <strong>3 magical words ❤️</strong>";
+
+                }
+
+                else if (wrongAttempts === 2) {
+
+                    hintText.innerHTML =
+                        "You're very close... think about three little words. 🥹❤️";
+
+                }
+
+                else {
+
+                    hintText.innerHTML =
+                        "The words that say what the heart feels... ❤️";
+
+                }
+
+
+                passwordInput.classList.remove(
+                    "shake"
+                );
+
+                void passwordInput.offsetWidth;
+
+                passwordInput.classList.add(
+                    "shake"
+                );
+
+            }
+
+        }
+
+
+        unlockBtn.addEventListener(
+            "click",
+            unlockWebsite
+        );
+
+
+        passwordInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    unlockWebsite();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           NAME LOCK
+        ===================================================== */
+
+        const nameInput =
+            document.getElementById(
+                "nameInput"
+            );
+
+        const openLetterBtn =
+            document.getElementById(
+                "openLetterBtn"
+            );
+
+        const nameError =
+            document.getElementById(
+                "nameError"
+            );
+
+        const letterSection =
+            document.getElementById(
+                "letterSection"
+            );
+
+
+        openLetterBtn.addEventListener(
+            "click",
+            function() {
+
+                const enteredName =
+                    nameInput.value
+                        .trim()
+                        .toLowerCase();
+
+
+                if (enteredName === "prafull") {
+
+                    nameError.textContent = "";
+
+                    letterSection.classList.remove(
+                        "hidden"
+                    );
+
+                    createConfetti(60);
+
+
+                    letterSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+
+                else {
+
+                    nameError.innerHTML =
+                        "Hmm... this letter has only one name on it. ❤️";
+
+
+                    nameInput.classList.remove(
+                        "shake"
+                    );
+
+                    void nameInput.offsetWidth;
+
+                    nameInput.classList.add(
+                        "shake"
+                    );
+
+                }
+
+            }
+        );
+
+
+        nameInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    openLetterBtn.click();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           STORY MESSAGE REVEAL
+        ===================================================== */
+
+        function showStoryMessage(number) {
+
+            const message =
+                document.getElementById(
+                    "storyMessage" + number
+                );
+
+
+            if (
+                message.classList.contains(
+                    "hidden"
+                )
+            ) {
+
+                message.classList.remove(
+                    "hidden"
+                );
+
+                createConfetti(15);
+
+            }
+
+            else {
+
+                message.classList.add(
+                    "hidden"
+                );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           CAKE SURPRISE
+        ===================================================== */
+
+        const cakeButton =
+            document.getElementById(
+                "cakeButton"
+            );
+
+        const cakeArea =
+            document.getElementById(
+                "cakeArea"
+            );
+
+        const blowButton =
+            document.getElementById(
+                "blowButton"
+            );
+
+        const birthdayMessage =
+            document.getElementById(
+                "birthdayMessage"
+            );
+
+
+        cakeButton.addEventListener(
+            "click",
+            function() {
+
+                cakeArea.classList.remove(
+                    "hidden"
+                );
+
+                cakeButton.style.display =
+                    "none";
+
+
+                cakeArea.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+                setTimeout(() => {
+
+                    createConfetti(50);
+
+                }, 800);
+
+            }
+        );
+
+
+        /* =====================================================
+           BLOW CANDLES
+        ===================================================== */
+
+        blowButton.addEventListener(
+            "click",
+            function() {
+
+                const flames =
+                    document.querySelectorAll(
+                        ".flame"
+                    );
+
+
+                flames.forEach(
+                    function(flame) {
+
+                        flame.style.animation =
+                            "none";
+
+                        flame.style.opacity =
+                            "0";
+
+                        flame.style.transform =
+                            "scale(0.2)";
+
+                    }
+                );
+
+
+                blowButton.textContent =
+                    "Wish made ❤️";
+
+
+                birthdayMessage.classList.remove(
+                    "hidden"
+                );
+
+
+                createConfetti(150);
+
+
+                setTimeout(() => {
+
+                    birthdayMessage.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+                }, 300);
+
+            }
+        );
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        const floatingHearts =
+            document.getElementById(
+                "floatingHearts"
+            );
+
+
+        function createHeart() {
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+
+            heart.className =
+                "heart";
+
+
+            const hearts = [
+                "❤️",
+                "💕",
+                "💗",
+                "💖",
+                "💘",
+                "♡"
+            ];
+
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random() *
+                        hearts.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+
+            heart.style.fontSize =
+                (12 + Math.random() * 20) +
+                "px";
+
+
+            heart.style.animationDuration =
+                (6 + Math.random() * 7) +
+                "s";
+
+
+            floatingHearts.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                () => heart.remove(),
+                15000
+            );
+
+        }
+
+
+        function startFloatingHearts() {
+
+            setInterval(
+                createHeart,
+                1000
+            );
+
+        }
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        function createConfetti(amount) {
+
+            const container =
+                document.getElementById(
+                    "confettiContainer"
+                );
+
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                const piece =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                piece.className =
+                    "confetti";
+
+
+                piece.style.left =
+                    Math.random() * 100 +
+                    "vw";
+
+
+                piece.style.animationDelay =
+                    Math.random() * 1.5 +
+                    "s";
+
+
+                piece.style.transform =
+                    `rotate(${Math.random() * 360}deg)`;
+
+
+                const size =
+                    5 +
+                    Math.random() * 8;
+
+
+                piece.style.width =
+                    size + "px";
+
+
+                piece.style.height =
+                    size * 1.5 + "px";
+
+
+                container.appendChild(
+                    piece
+                );
+
+
+                setTimeout(
+                    () => piece.remove(),
+                    5000
+                );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           SCROLL HELPER
+        ===================================================== */
+
+        function scrollToSection(id) {
+
+            const section =
+                document.getElementById(id);
+
+
+            if (section) {
+
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MUSIC
+        ===================================================== */
+
+        const musicButton =
+            document.getElementById(
+                "musicButton"
+            );
+
+        const music =
+            document.getElementById(
+                "birthdayMusic"
+            );
+
+        let musicPlaying = false;
+
+
+        musicButton.addEventListener(
+            "click",
+            function() {
+
+                if (!musicPlaying) {
+
+                    music.play().catch(() => {});
+
+                    musicPlaying = true;
+
+                    musicButton.innerHTML =
+                        "🔊";
+
+                }
+
+                else {
+
+                    music.pause();
+
+                    musicPlaying = false;
+
+                    musicButton.innerHTML =
+                        "♫";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
